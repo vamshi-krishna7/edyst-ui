@@ -7,7 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* styles for laptop screens > 769px  */
+/* styles for laptop and large screens > 769px  */
 .container {
     background-color: #F2F2F2;
     max-width: 1024px;
@@ -55,3 +55,25 @@ body {
 .card-image > img {
     width: 100%;
 }
+
+/* styles for medium screen sizes < 767px*/
+@media(max-width:767px) {   
+    .container {
+        padding: 2rem;
+    }
+    .card-header > .card-header-badge {
+        padding: 0.2rem 0.4rem;
+    }
+    .card-contents > .card-heading-secondary {
+        font-size: 1rem;
+        margin: 1rem 0rem;
+    }
+    .card-contents > .content {
+        font-size: 14px;
+    }
+    .card-image {
+        height: 20vw;
+        width: 20vw;
+    }
+}
+
