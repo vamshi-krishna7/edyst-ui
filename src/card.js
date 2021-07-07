@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import SingleCard from './singleCard';
 const Card = () => {
 
     const [cardData, setCardData] = useState([]);
@@ -9,9 +9,13 @@ const Card = () => {
     }, [])
     
     return (
-        <div>
-            Card
-        </div>
+        <section className="card">
+            {
+                cardData.map((card) => (
+                    <SingleCard key={card.name} card={card}/>
+                ))
+            }
+        </section>
     )
 }
 
