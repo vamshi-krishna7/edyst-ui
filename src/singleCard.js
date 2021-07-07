@@ -1,16 +1,16 @@
 const SingleCard = (props) => {
     const {cardColors, description, name, sprite, tag} = props.card;
     return(
-        <div class="card">
-            <div class="card-header">
-                <span class="card-header-badge">{name}</span>
-                <span class="card-icon">&#10230;</span>
+        <div className="card" style={{backgroundColor: `${cardColors.bg}`, color:`${cardColors.text}`}}>
+            <div className="card-header">
+                <span className="card-header-badge" style={{backgroundColor: `${cardColors.tagbg}`}}>{name}</span>
+                <span className="card-icon">&#10230;</span>
             </div>
-            <div class="card-contents">
-                <h4 class="card-heading-secondary">{name}</h4>
-                <p class="content">{description}</p>
+            <div className="card-contents">
+                <h3 className="card-heading-secondary">{name}</h3>
+                <p className="content">{description}</p>
             </div>
-            <div class="card-image">
+            <div className="card-image" style={{backgroundColor: `${cardColors.imgbg}`}}>
                 <img src={sprite} alt={name}/>
             </div>
         </div>

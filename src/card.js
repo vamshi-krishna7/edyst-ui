@@ -9,12 +9,14 @@ const Card = () => {
     }, [])
     
     return (
-        <section className="card">
-            {
-                cardData.map((card) => (
-                    <SingleCard key={card.name} card={card}/>
-                ))
-            }
+        <section className="cards-section">
+            <div className="container">
+                {
+                    cardData.map((card) => (
+                        <SingleCard key={card.name} card={card}/>
+                    ))
+                }
+            </div>
         </section>
     )
 }
