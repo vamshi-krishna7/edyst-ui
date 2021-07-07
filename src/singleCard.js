@@ -1,5 +1,5 @@
 const SingleCard = (props) => {
-    const {cardColors, description, name, sprite, tag} = props.card;
+    const {cardColors, description, name, sprite} = props.card;
     return(
         <div className="card" style={{backgroundColor: `${cardColors.bg}`, color:`${cardColors.text}`}}>
             <div className="card-header">
